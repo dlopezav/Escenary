@@ -44,19 +44,60 @@ public class LoopJuego extends AnimationTimer {
                 colisiones.add(new Rectangle(0,32*i,32,32));
             }
             colisiones.add(new Rectangle(0,32*11,32,32));
+            for (int i = 1; i <= 3; i++) {
+            colisiones.add(new Rectangle(32*12,32*i,32,32));
+            }
+            colisiones.add(new Rectangle(32*12,32*4,32,32));
+            
+            for (int i = 5; i <= 10; i++) {
+                colisiones.add(new Rectangle(32*12,32*i,32,32));
+            }
+                colisiones.add(new Rectangle(32*12,32*11,32,32));
+            //Muros inferiores
+            for (int i = 1; i <= 2; i++) {
+                colisiones.add(new Rectangle(32*i,32*11,32,32));
+            }
+            colisiones.add(new Rectangle(32*3,32*11,32,32));
+
+            colisiones.add(new Rectangle(32*6,32*11,32,32));
+
+            colisiones.add(new Rectangle(32*7,32*11,32,32));
+            for (int i = 8; i <= 11; i++) {
+                colisiones.add(new Rectangle(32*i,32*11,32,32));
+            }
+            //Muro intermedio superior
+            for (int i = 1; i <= 5; i++) {
+                colisiones.add(new Rectangle(32*7,32*i,32,32));
+            }
+
+            colisiones.add(new Rectangle(32*7,32*6,32,32));
+            colisiones.add(new Rectangle(32*6,32*6,32,64));
+            colisiones.add(new Rectangle(32*7,32*7,32,64));
+            //Muro intermedio izquierda
+            for (int i = 1; i <= 2; i++) {
+                colisiones.add(new Rectangle(32*i,32*6,32,64));
+            }
+            colisiones.add(new Rectangle(32*3,32*6,32,64));
+            //Muro intermedio inferior
+            colisiones.add(new Rectangle(32*7,32*10,32,32));
+            //Muro intermedio derecha
+            colisiones.add(new Rectangle(32*9,32*4,32,64));
+            for (int i = 10; i <= 11; i++) {
+            colisiones.add(new Rectangle(32*i,32*4,32,64));
+            }
             //Obj Cocina
             colisiones.add(new Rectangle(32*1,32*1+(64-51),31,51));
             colisiones.add(new Rectangle(32*2,32*1+(64-61),31,61));
             colisiones.add(new Rectangle(32*3,32*1+(64-44),31,44));
             colisiones.add(new Rectangle(32*4,32*1+(64-50),63,50));
             colisiones.add(new Rectangle(32*6+5,32*1+5,18,26));
-            colisiones.add(new Rectangle(32*2,32*4-2,63,39));
+            colisiones.add(new Rectangle(32*2,136,63,29));
             colisiones.add(new Rectangle(32*6+8,32*5+8,20,16));
             //Sala
             colisiones.add(new Rectangle(32*2,32*7,64,64));
             colisiones.add(new Rectangle(30,32*10-2,66,34));
             colisiones.add(new Rectangle(32*6+3,32*7+16,28,41));
-                    //Objetos Habitación
+            //Objetos Habitación
             colisiones.add(new Rectangle(32*10-1,32*5+3,65,90));
             colisiones.add(new Rectangle(32*11-1,32*9,33,65));
             //Objetos Baño
@@ -92,33 +133,24 @@ public class LoopJuego extends AnimationTimer {
         //Muro lateral derecho
         for (int i = 1; i <= 3; i++) {
             gc.drawImage(imagen,365,250,32,32,32*12,32*i,32,32);
-            //colisiones.add(new Rectangle(32*12,32*i,32,32));
         }
         gc.drawImage(imagen,289,118,32,32,32*12,32*4,32,32);
-            //colisiones.add(new Rectangle(32*12,32*4,32,32));
             
         for (int i = 5; i <= 10; i++) {
             gc.drawImage(imagen,365,250,32,32,32*12,32*i,32,32);
-            //colisiones.add(new Rectangle(32*12,32*i,32,32));
         }
             gc.drawImage(imagen,365,214,32,32,32*12,32*11,32,32);
-            //colisiones.add(new Rectangle(32*12,32*11,32,32));
         //Muros inferiores
         for (int i = 1; i <= 2; i++) {
             gc.drawImage(imagen,326,250,32,32,32*i,32*11,32,32);
-            //colisiones.add(new Rectangle(32*i,32*11,32,32));
         }
         gc.drawImage(imagen,289,2,32,32,32*3,32*11,32,32);
-        //colisiones.add(new Rectangle(32*3,32*11,32,32));
         
         gc.drawImage(imagen,289,44,32,32,32*6,32*11,32,32);
-        //colisiones.add(new Rectangle(32*6,32*11,32,32));
         
         gc.drawImage(imagen,325,74,32,32,32*7,32*11,32,32);
-        //colisiones.add(new Rectangle(32*7,32*11,32,32));
         for (int i = 8; i <= 11; i++) {
             gc.drawImage(imagen,326,250,32,32,32*i,32*11,32,32);
-            //colisiones.add(new Rectangle(32*i,32*11,32,32));
         }
         //Muro intermedio superior
         for (int i = 1; i <= 5; i++) {
@@ -138,16 +170,12 @@ public class LoopJuego extends AnimationTimer {
             //colisiones.add(new Rectangle(32*i,32*6,32,64));
         }
         gc.drawImage(imagen,365,73,32,64,32*3,32*6,32,64);
-        //colisiones.add(new Rectangle(32*3,32*6,32,64));
         //Muro intermedio inferior
         gc.drawImage(imagen,365,141,32,32,32*7,32*10,32,32);
-        //colisiones.add(new Rectangle(32*7,32*10,32,32));
         //Muro intermedio derecha
         gc.drawImage(imagen,364,2,32,64,32*9,32*4,32,64);
-        //colisiones.add(new Rectangle(32*9,32*4,32,64));
         for (int i = 10; i <= 11; i++) {
             gc.drawImage(imagen,325,109,32,64,32*i,32*4,32,64);
-            //colisiones.add(new Rectangle(32*i,32*4,32,64));
         }
         //piso cocina
         for (int i = 1; i <= 6; i++) {
@@ -187,7 +215,6 @@ public class LoopJuego extends AnimationTimer {
         gc.drawImage(imagen,176,60,31,44,32*3,32*1+(64-44),31,44);
         gc.drawImage(imagen,6,53,63,50,32*4,32*1+(64-50),63,50);
         gc.drawImage(imagen,183,211,18,26,32*6+5,32*1+5,18,26);
-        gc.drawImage(imagen,109,63,63,39,32*2,32*4-2,63,39);
         gc.drawImage(imagen,212,184,28,20,32*5-15,32*6+5,28,20);
         gc.drawImage(imagen,183,185,20,16,32*6+8,32*5+8,20,16);
         
@@ -206,41 +233,47 @@ public class LoopJuego extends AnimationTimer {
         gc.drawImage(imagen,106,9,13,9,32*11+18,32*3+19,13,9);
         
         gc.drawImage(jugador.getImage()[jugador.getSentido()][jugador.getPaso()], jugador.getX(), jugador.getY(),30,40);
-        
+        //Mesa cocina
+        gc.drawImage(imagen,109,63,63,39,32*2,32*4-2,63,39);
         
         //Eventos teclado
-        if(pulsacionTeclado.contains("LEFT")){
-            jugador.AvanzarIzquierda();
-        }else if(pulsacionTeclado.contains("RIGHT")){
-            jugador.AvanzarDerecha();
-        }else if(pulsacionTeclado.contains("UP")){
-            jugador.AvanzarArriba();
-        }else if(pulsacionTeclado.contains("DOWN")){
-            jugador.AvanzarAbajo();
-        }
         
-        if(pulsacionTeclado.isEmpty()&&jugador.getPaso()!=1){
-            /*if(jugador.getContpasos()!=0){
-                jugador.setContpasos(jugador.getContpasos()+1);
-            }*/
             
-            if(jugador.getContpasos()!=0&&jugador.getContpasos()!=10){
-                jugador.setContpasos(jugador.getContpasos()+1);
-            }else if(jugador.getContpasos()==10){
-                jugador.setContpasos(0);
-            }
-            //if(jugador.getContpasos()==0){
-                jugador.setPaso(1);
-            //}
-        }
+            
+                if(pulsacionTeclado.contains("LEFT")){
+            jugador.AvanzarIzquierda();
+                }else if(pulsacionTeclado.contains("RIGHT")){
+            jugador.AvanzarDerecha();
+                }else if(pulsacionTeclado.contains("UP")){
+            jugador.AvanzarArriba();
+                }else if(pulsacionTeclado.contains("DOWN")){
+            jugador.AvanzarAbajo();
+                }
         
         
         
         for(Shape s : colisiones){
             Shape interseccion = SVGPath.intersect(s,jugador.getShape());
             if (interseccion.getBoundsInLocal().getWidth()!=-1 && interseccion.getBoundsInLocal().getHeight()!=-1) {
-                //System.out.println("Colision!");
-                stop();
+            switch(jugador.getSentido()){
+                case 0:
+                    jugador.setY(jugador.getY()+1);
+                    jugador.setShape(new Rectangle(jugador.getX()+3,jugador.getY()+27,18,13));
+                    break;
+                case 1:
+                    jugador.setX(jugador.getX()-1);
+                    jugador.setShape(new Rectangle(jugador.getX()+3,jugador.getY()+27,18,13));
+                    break;
+                case 2:
+                    jugador.setY(jugador.getY()-1);
+                    jugador.setShape(new Rectangle(jugador.getX()+3,jugador.getY()+27,18,13));
+                    break;
+                case 3:
+                    jugador.setX(jugador.getX()+1);
+                    jugador.setShape(new Rectangle(jugador.getX()+3,jugador.getY()+27,18,13));
+                    break;
+            }
+        
             }
         }
         
